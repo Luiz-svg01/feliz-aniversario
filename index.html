@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feliz Aniversário, Meu Amor 💖</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+      color: #333;
+      text-align: center;
+      overflow-x: hidden;
+      position: relative;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      padding: 20px;
+      position: relative;
+      z-index: 1;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #fff;
+      margin-top: 20px;
+    }
+    .texto {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #fff;
+      margin-bottom: 20px;
+      min-height: 50px;
+    }
+    .foto {
+      margin: 30px 0;
+    }
+    .foto img {
+      width: 80%;
+      max-width: 100%;
+      border-radius: 20px;
+      box-shadow: 0px 4px 15px rgba(0,0,0,0.3);
+    }
+    .coracao {
+      font-size: 3rem;
+      animation: pulsar 1s infinite ease-in-out;
+      margin: 20px 0;
+    }
+    @keyframes pulsar {
+      0% { transform: scale(1); color: #ff4b5c; }
+      50% { transform: scale(1.2); color: #ff1e56; }
+      100% { transform: scale(1); color: #ff4b5c; }
+    }
+    /* Confete */
+    .confetti {
+      position: fixed;
+      width: 10px;
+      height: 10px;
+      background-color: red;
+      top: -10px;
+      z-index: 0;
+      pointer-events: none;
+      animation-name: cair;
+      animation-duration: 5s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+    }
+    @keyframes cair {
+      0% { transform: translateY(0) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(360deg); }
+    }
+    iframe.spotify-player {
+      width: 0;
+      height: 0;
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <!-- Música do Spotify baixinha no fundo -->
+  <iframe class="spotify-player" src="https://open.spotify.com/embed/track/5ysAd8oWIuL1D5hexR3ggA?autoplay=1" allow="autoplay"></iframe>
+
+  <div class="container">
+    <h1>Feliz Aniversário, Meu Amor! 🎉</h1>
+
+    <!-- Fotos -->
+    <div class="foto">
+      <img src="https://i.ibb.co/7dSQLkpX/Imagem-do-Whats-App-de-2025-09-01-s-00-17-56-583656aa.jpg" alt="Nossa Foto">
+    </div>
+
+    <div class="foto">
+      <img src="https://i.ibb.co/cRNDdW6/Imagem-do-Whats-App-de-2025-09-01-s-19-43-09-1326369b.jpg" alt="Outra Foto">
+    </div>
+
+    <div class="foto">
+      <img src="https://i.ibb.co/wh0GvrF7/Imagem-do-Whats-App-de-2025-09-01-s-19-43-07-92b204c5.jpg" alt="Mais Uma Foto">
+    </div>
+
+    <div class="foto">
+      <img src="https://i.ibb.co/bgbbQNbk/Imagem-do-Whats-App-de-2025-09-01-s-19-43-09-a8130c3d.jpg" alt="Espaço para foto futura">
+    </div>
+
+    <!-- Frases curtas com digitação -->
+    <div class="texto" id="texto1"></div>
+    <div class="texto" id="texto2"></div>
+    <div class="texto" id="texto3"></div>
+    <div class="texto" id="texto4"></div>
+
+    <p class="coracao">❤️</p>
+
+    <!-- Textos longos fixos -->
+    <p>
+      Hoje é o dia do meu amor!! Que Deus continue abençoando a tua vida para todo sempre, saiba que você é MUITO especial pra gente!!<br><br>
+      Feliz aniversário meu amor, espero que teu dia seja MUITO especial hoje.<br><br>
+      Obrigado por sempre estar ao meu lado, sou muito feliz contigo. Que você viva muitos anos de vida, de preferência ao meu lado hehe😅<br><br>
+      Que seu dia e sua vida sejam próspera e feliz para todo sempre. Quero agradecer principalmente a Deus por me proporcionar momentos ao teu lado. Já fazem 1 ano que eu aprendi o que é ser feliz ao lado de alguém. Obrigado por ser essa pessoa especial, linda, divertida e maravilhosa que você é!!!<br><br>
+      Eu te amo muintaoooooo ❣ 💕
+    </p>
+
+    <!-- Música -->
+    <div class="musica">
+      <h2>Nossa música 🎶</h2>
+      <iframe src="https://open.spotify.com/embed/track/5ysAd8oWIuL1D5hexR3ggA" width="100%" height="80" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+  </div>
+
+  <script>
+    // Confete
+    const cores = ["#ff4b5c","#ff1e56","#ff9a9e","#fad0c4","#fff"];
+    for(let i=0; i<100; i++){
+      const confete = document.createElement("div");
+      confete.classList.add("confetti");
+      confete.style.left = Math.random() * window.innerWidth + "px";
+      confete.style.backgroundColor = cores[Math.floor(Math.random()*cores.length)];
+      confete.style.width = confete.style.height = (Math.random()*10 + 5) + "px";
+      confete.style.animationDuration = (Math.random()*3 + 2) + "s";
+      confete.style.animationDelay = Math.random() * 5 + "s";
+      document.body.appendChild(confete);
+    }
+
+    // Efeito de digitação para frases curtas
+    const frases = [
+      "Hoje é o dia da pessoa mais incrível do mundo! 💖",
+      "Você ilumina meus dias e faz meu coração sorrir. 🌟",
+      "Cada momento contigo é um presente que eu quero guardar pra sempre. 🎁",
+      "Quando penso em você, meu mundo fica mais colorido e cheio de alegria. 🌈"
+    ];
+
+    function digitar(texto, elementId, velocidade = 50) {
+      const element = document.getElementById(elementId);
+      let i = 0;
+      function escrever() {
+        if(i < texto.length) {
+          element.innerHTML += texto.charAt(i);
+          i++;
+          setTimeout(escrever, velocidade);
+        }
+      }
+      escrever();
+    }
+
+    let delay = 0;
+    frases.forEach((frase, index) => {
+      setTimeout(() => {
+        digitar(frase, `texto${index+1}`);
+      }, delay);
+      delay += frase.length * 50 + 500;
+    });
+  </script>
+</body>
+</html>
